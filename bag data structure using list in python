@@ -1,0 +1,26 @@
+class Bag:
+    def __init__(self):
+        self.theitems=list()
+    def __len__(self):
+        return len(self.theitems)
+    def __contains__(self):
+        return item in self.theitems
+    def add(self,item):
+        self.theitems.append(item)
+    def remove(self,item):
+        if list():
+            element=self.theitems.index(item)
+            return self.theitems.pop(element)
+class BagIterator:
+    def __init__(self,thelist):
+        self.theitems=list()
+        self.currentitemindex=0
+    def __iter__(self):
+        return self
+    def __next__(self):
+        if self.currentitemindex<len(self.theitems):
+            item=self.theitems[self.currentitemindex]
+            self.currentitemindex+=1
+            return item
+    else:
+        print("cannot iterate ;range out of bounds  ")

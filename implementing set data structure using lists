@@ -1,0 +1,25 @@
+class Set:
+	def __init__(self):
+		self.theelements=list()
+	def __len__(self):
+		return len(self.theelements)
+	def __contains(self):
+		return elements in self.theelements
+	def add(self,element):
+		if element not in self:
+			self.theelements.append(element)
+	def remove(self,element):
+		while list:
+			self.theelements.remove(element)
+	def __eq__(self,setB):
+		if len(self)==len(setB):
+			return True 
+		else:
+			return False 
+	def issubsetof(self,setB):
+		for element in self:
+			if element not in setB:
+				return False
+			else:
+				return True 
+  

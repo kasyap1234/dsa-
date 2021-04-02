@@ -1,0 +1,23 @@
+
+
+#creating an undirected graph 
+
+class Graph(self,size):
+	def __init__(self,size):
+		self.adjacencymatrix=[]
+		for i in range(size):
+			self.adjacencymatrix.append([0 for i in range(size)])
+		self.size=size
+	def add_edge(self,v1,v2):
+		if v1==v2:
+			print("edge cannot be created between the same node")
+	    self.adjacencymatrix[v1][v2]==1
+	    self.adjacencymatrix[v2][v1]==1
+    def remove_edge(self,v1,v2):
+    	if self.adjacencymatrix[v1][v2]==0:
+    		print("cannot remove an edge as it does not exists")
+    	self.adjacencymatrix[v1][v2]==0
+    def __len__(self):
+    	return self.size 
+   #after this ,just print the adjacencymatrix 
+   

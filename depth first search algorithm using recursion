@@ -1,0 +1,18 @@
+class Node:
+	def __init__(self,data):
+		self.data=data
+		self.adjacencylist=[]
+		self.visited=False
+
+
+class depth:
+	def dfs(self,startnode):
+		startnode=Node(data)
+		startnode.visited=True 
+		print(startnode.data)
+		for i in startnode.adjacencylist:
+			if i.visited==False:
+				self.dfs(i)
+
+
+#abstract data structure stack is used by the operataing system to genereate the depth first search algorithm . 

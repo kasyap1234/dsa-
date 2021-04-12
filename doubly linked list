@@ -16,5 +16,17 @@ class Doublelinkedlist:
        	self.head=newnode
        	
        	#which means that you want to insert a node in the presence of the initial first node
+	
+	def insert_after(self,prevnode,newnode):
+		# need to insert a node a node after a given node following the template of doubly linked list
+		if prevnode==None : 
+			return "prevnode does not exist in the doubly linkedlist"
+		newnode=Node(data)
+		newnode.next=prevnode.next
+	    if newnode.next !=None : 
+			prevnode.next.prev=newnode
+		prevnode.next=newnode
+		newnode.prev=prevnode
+
 
 	

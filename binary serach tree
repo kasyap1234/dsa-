@@ -21,4 +21,10 @@ class Binarysearchtree:
             self.insertnode(data,node.rightchild)
         else:
             node.rightchild=node(data)
-            
+    def searchnode(root,value):
+        if root.data==value:
+            return root
+        elif value<root.data:
+            return searchnode(root.leftchild,value)
+        else:
+            return searchnode(root.rightchild,value)

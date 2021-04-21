@@ -1,0 +1,24 @@
+class Node:
+    def __init__(self,data):
+        self.data=data
+        self.leftchild=None
+        self.rightchild=None
+class Binarysearchtree:
+    def __init__(self):
+        self.root=None
+    def insert(self,value):
+        node=Node(data)
+        if self.root is None:
+            self.root=node(value)
+        else:
+            self.insertnode(value,self.root)
+    def insertnode(self,data,node):
+        if data<node.data:
+            self.insertnode(data,node.leftchild)
+        else:
+            node.leftchild=node(data)
+        if data>node.data:
+            self.insertnode(data,node.rightchild)
+        else:
+            node.rightchild=node(data)
+            

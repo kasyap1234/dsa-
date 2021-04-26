@@ -28,3 +28,8 @@ class Binarysearchtree:
             return searchnode(root.leftchild,value)
         else:
             return searchnode(root.rightchild,value)
+    def count_nodes(self,root):
+    if not root:
+        return 0
+    return (1+count_nodes(root.leftchild)+count_nodes(root.rightchild))
+

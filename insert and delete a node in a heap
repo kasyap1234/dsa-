@@ -1,0 +1,16 @@
+def deletenode(arr,value):
+    n=len(arr)
+    for i in range(n):
+        if arr[i]==value:
+            break
+    arr[i],arr[n-1]=arr[n-1],arr[i]
+    arr.remove(n-1)
+    for i in range(n//2-1,-1,-1):
+        heapify(arr,n,i)
+def insertnode(arr,newvalue):
+    if len(arr)==0:
+        arr.insert(newvalue)
+    else:
+        arr.append(newvalue)
+        for i in range(len(arr)//2-1,-1,-1):
+            heapify(arr,len(arr),i)

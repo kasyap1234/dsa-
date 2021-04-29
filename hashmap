@@ -1,0 +1,18 @@
+class Hashmap:
+    def __init__(self):
+        self.MAX=100
+        self.arr=[None for n in range(self.MAX)]
+    def get_hash(self,key):
+        hash=0
+        for i in key:
+            hash+=ord(key)
+        return hash%self.MAX
+    def __set_hash__(self,key,value):
+        h=self.get_hash(key)
+        self.arr[h]=val
+    def __deleteitem__(self,key):
+        h=self.get_hash(key)
+        self.arr[h]=None
+    def __getitem__(self,key):
+        h=self.get_hash(key)
+        return self.arr[h]

@@ -18,7 +18,7 @@ void BFS(vector<int> adj[], int N, int src)
             if (dist[node] + 1 < dist[itr])
             {
                 dist[itr] = 1 + dist[node];
-                q.push(it);
+                q.push(itr);
             }
         }
     }
